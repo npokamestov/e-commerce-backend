@@ -20,7 +20,7 @@ router.get('/', (req, res) => {
   })
   .then(dbCatData => res.json(dbCatData))
   .catch(err => {
-    console.log(err);
+    // console.log(err);
     res.status(500).json(err);
   });
 });
@@ -38,52 +38,58 @@ router.get('/:id', (req, res) => {
         attributes: [
           'product_name',
           'price',
-          'stock'
+          'stock',
+          'category_id'
         ]
       }
     ]
   })
   .then(dbCatData => {
     if (!dbCatData) {
-      res.status(404).json({ message: 'No Catagory found with this ID' });
+      res.status(404).json({ message: 'No Category found with this ID' });
       return;
     }
     res.json(dbCatData);
   })
   .catch(err => {
-    console.log(err);
+    // console.log(err);
     res.status(500).json(err);
   });
 });
 
 router.post('/', (req, res) => {
   // create a new category
-  Category.create(req.body, {
-    category_name
+  Category.create({
+    category_name: req.body.category_name
   })
   .then(dbCatData => res.json(dbCatData))
   .catch(err => {
-    console.log(err);
+    // console.log(err);
     res.status(500).json(err);
   });
 });
 
 router.put('/:id', (req, res) => {
   // update a category by its `id` value
-  Category.update({
-    where: {
-      id: req.params.id
+  Category.update( 
+    {
+      category_name: req.body.category_name
+    },
+    {
+      where: {
+        id: req.params.id
+      }
     }
-  })
+  )
   .then(dbCatData => {
     if (!dbCatData) {
-      res.status(404).json({ message: 'No Catagory found with this ID' });
+      res.status(404).json({ message: 'No Category found with this ID' });
       return;
     }
     res.json(dbCatData);
   })
   .catch(err => {
-    console.log(err);
+    // console.log(err);
     res.status(500).json(err);
   });
 });
@@ -97,13 +103,13 @@ router.delete('/:id', (req, res) => {
   })
   .then(dbCatData => {
     if (!dbCatData) {
-      res.status(404).json({ message: 'No Catagory found with this ID' });
+      res.status(404).json({ message: 'No Category found with this ID' });
       return;
     }
     res.json(dbCatData);
   })
   .catch(err => {
-    console.log(err);
+    // console.log(err);
     res.status(500).json(err);
   });
 });
