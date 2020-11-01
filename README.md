@@ -1,2 +1,97 @@
-# e-commerce-backend
-e-commerce backend development using ORM
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+# E-Commerce Database
+
+## Created by:
+
+### Nikita Pokamestov
+
+## License
+
+E-Commerce Database is licensed under the
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+MIT License
+
+A short and simple permissive license with conditions only requiring preservation of copyright and license notices. Licensed works, modifications, and larger works may be distributed under different terms and without source code.
+Permissions | Limitations  |   Conditions
+------------ | ------------  | ------------
+Commercial use | Liability |   License and copyright notice
+Modification | Warranty    |
+Distribution |     |
+Private use |     |
+
+## Description
+
+Back end database for an e-commerce app using MySQL, Sequelize, and Express.js
+
+## Table of Contents
+
+* [Installation](#installation)
+
+* [Usage](#usage)
+
+* [Contributing](#contributing)
+
+* [Tests](#tests)
+
+* [Video Walkthrough](#video-walkthrough)
+
+* [Questions](#questions)
+
+## Installation
+
+To Install necessary dependencies, run the following commands:
+
+```
+git clone git@github.com:npokamestov/e-commerce-backend.git
+```
+Create a `.env` file in the root directory with the following info
+> DB_NAME='ecommerce_db'
+>
+> DB_USER='*your_username_here*'
+>
+> DB_PW='*your_password_here*'
+```
+npm install
+```
+Start MySQL by entering in the command prompt `mysql -u root -p` and then entering your password.  Initialize the database by entering `source db/schema.sql`.  Quit MySQL by typing `\q`.
+```
+npm run seed
+```
+
+## Usage
+
+```
+npm start
+```
+
+## Contributing
+
+If you want to know about contributing to the repo:
+
+Reach out to my GitHub Repository
+
+## Tests
+
+To run the tests, run the following command:
+
+```
+n/a
+```
+
+## Video Walkthrough
+
+- [https://drive.google.com/file/d/1nr9TTI8BjpCVXBdN-tx5k2ufvjnwf8k8/view](https://drive.google.com/file/d/1nr9TTI8BjpCVXBdN-tx5k2ufvjnwf8k8/view)
+
+
+
+## Questions?
+
+If there are any questioins please refer to this email or leave a comment in the repository
+
+Email: npokamestov@gmail.com
+
+Github Website: https://github.com/npokamestov/
